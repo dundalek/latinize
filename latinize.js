@@ -1,17 +1,20 @@
 
-(function (factory) {
-    if (typeof module !== 'undefined' && typeof module.exports !== 'undefined' && typeof require !== 'undefined') {
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(factory);
+    } else if (typeof exports === 'object') {
         // CommonJS
         module.exports = factory();
     } else {
         // running in browser
-        window.latinize = factory();
+        root.latinize = factory();
     }
-})(function() {
+})(this, function() {
 
 function latinize(str) {
     return str.replace(/[^A-Za-z0-9]/g, function(x) { return latin_map[x] || x; });
-};
+}
 
 var latin_map = {
 'Á': 'A',
