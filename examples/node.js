@@ -1,2 +1,2 @@
 var latinize = require('../../latinize');
-console.log(latinize('naïve áéíóúýčďěňřšťžů'));
+console.log(latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů'));
