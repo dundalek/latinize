@@ -35,6 +35,16 @@ browser
 </script>
 ```
 
+You can use the `latinize.characters` object to access the translation table or to change the mapping:
+
+```javascript
+latinize.characters['Ω'] = 'O';
+
+// modify the behavior for German umlauts
+_.extend(latinize.characters,
+  {'Ä': 'Ae', 'Ä': 'Ae', 'Ü': 'Ue', 'ä': 'ae', 'ö': 'oe', 'ü': 'ue'});
+```
+
 ## Details
 
 Is is a lookup table taken from [http://jsperf.com/latinize](http://jsperf.com/latinize) packaged for node and browser. Visit the link to see more approaches.
