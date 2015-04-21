@@ -9,6 +9,12 @@ Simple library to convert accents (diacritics) from strings to latin characters.
 npm install latinize
 ```
 
+or
+
+```
+bower install latinizejs
+```
+
 ## Usage
 
 node.js
