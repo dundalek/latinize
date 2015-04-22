@@ -12,7 +12,7 @@ npm install latinize
 or
 
 ```
-bower install latinizejs
+bower install latinize
 ```
 
 ## Usage
