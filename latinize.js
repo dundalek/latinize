@@ -12,11 +12,11 @@
 })(this, function() {
 
   function latinize(str) {
-    if(typeof str === 'string'){
+    if (typeof str === 'string') {
       return str.replace(/[^A-Za-z0-9]/g, function(x) {
         return latinize.characters[x] || x;
       });
-    }else{
+    } else {
       return str;
     }
   }
