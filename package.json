@@ -6,6 +6,10 @@
   "directories": {
     "example": "examples"
   },
+  "scripts": {    
+    "minify": "uglifyjs latinize.js > latinize.min.js",
+    "test": "mocha test/test.js"    
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/dundalek/latinize.git"
@@ -19,5 +23,9 @@
     "latinise",
     "accents",
     "diacritics"
-  ]
+  ],
+  "devDependencies": {       
+    "mocha": "^2.5.3",
+    "uglify-js": "^2.6.2"
+  }
 }
