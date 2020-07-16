@@ -1,23 +1,32 @@
 {
-  "name": "latinize",
-  "version": "0.4.1",
-  "description": "Simple library to convert accents (diacritics) from strings to latin characters.",
-  "main": "latinize.js",
-  "directories": {
-    "example": "examples"
+  "private": true,
+  "scripts": {
+    "postinstall": "run-s build",
+    "build": "run-s compat minify",
+    "compat": "run-p compat:*",
+    "compat:umd": "rollup src/latinize.esm.mjs --format umd --file dist/latinize.umd.js --name latinize",
+    "compat:mostCase": "rollup src/latinize.esm.mjs --format umd --file dist/latinize.js --name latinize",
+    "compat:iife": "rollup src/latinize.esm.mjs --format iife --file dist/latinize.iife.js --name latinize",
+    "compat:amd": "rollup src/latinize.esm.mjs --format amd --file dist/latinize.amd.js",
+    "compat:cjs": "rollup src/latinize.esm.mjs --format cjs --file dist/latinize.cjs",
+    "compat:nodejs": "rollup src/latinize.esm.mjs --format cjs --file dist/latinize.cjs.js",
+    "compat:mjs": "rollup src/latinize.esm.mjs --format esm --file dist/latinize.mjs",
+    "compat:esm": "rollup src/latinize.esm.mjs --format esm --file dist/latinize.esm.js",
+    "minify": "run-p minify:*",
+    "minify:umd": "uglifyjs dist/latinize.umd.js > dist/latinize.min.js",
+    "minify:iife": "uglifyjs dist/latinize.iife.js > dist/latinize.iife.min.js",
+    "minify:amd": "uglifyjs dist/latinize.amd.js > dist/latinize.amd.min.js",
+    "minify:cjs": "uglifyjs dist/latinize.cjs > dist/latinize.cjs.min.js",
+    "publish": "run-s build publish:*",
+    "publish:addPackage.json": "cp npm-package.json dist/package.json",
+    "publish:README.md": "cp README.md dist/README.md",
+    "publish:npm": "cd dist && npm publish",
+    "test": "mocha test/test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/dundalek/latinize.git"
-  },
-  "homepage": "http://github.com/dundalek/latinize",
-  "author": "Jakub Dundalek <dundalek@gmail.com> (http://dundalek.com/)",
-  "license": "BSD",
-  "keywords": [
-    "string",
-    "latinize",
-    "latinise",
-    "accents",
-    "diacritics"
-  ]
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.21.0",
+    "uglify-js": "^3.10.0"
+  }
 }
