@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/dundalek/latinize.git"
+    "url": "https://github.com/dundalek/latinize.git"
   },
-  "homepage": "http://github.com/dundalek/latinize",
-  "author": "Jakub Dundalek <dundalek@gmail.com> (http://dundalek.com/)",
+  "homepage": "https://github.com/dundalek/latinize",
+  "author": "Jakub Dundalek",
   "license": "BSD",
   "keywords": [
     "string",
