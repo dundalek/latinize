@@ -9,19 +9,20 @@ Simple library to convert accents (diacritics) from strings to latin characters.
 npm install latinize
 ```
 
-or
-
-```
-bower install latinize
-```
-
 ## Usage
 
-node.js
+ES module
+
+```javascript
+import latinize from 'latinize';
+latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů'); // => 'ExAmPlE aeiouycdenrstzu'
+```
+
+node.js CommonJS
 
 ```javascript
 var latinize = require('latinize');
-latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů'); // => 'ExAmPlE aeiouycdenrstzu'
+latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů');
 ```
 
 AMD
