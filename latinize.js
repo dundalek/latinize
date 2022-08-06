@@ -16,9 +16,8 @@
       return str.replace(/[^A-Za-z0-9]/g, function(x) {
         return latinize.characters[x] || x;
       });
-    } else {
-      return str;
     }
+    return str;
   }
 
   latinize.characters = {
