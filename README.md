@@ -49,7 +49,7 @@ latinize.characters['Ω'] = 'O';
 
 // modify the behavior for German umlauts
 _.extend(latinize.characters,
-  {'Ä': 'Ae', 'Ä': 'Ae', 'Ü': 'Ue', 'ä': 'ae', 'ö': 'oe', 'ü': 'ue'});
+  {'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue', 'ä': 'ae', 'ö': 'oe', 'ü': 'ue'});
 ```
 
 ## Details
