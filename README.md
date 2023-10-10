@@ -42,14 +42,15 @@ browser
 </script>
 ```
 
-You can use the `latinize.characters` object to access the translation table or to change the mapping:
+You can use the `latinize.characters` object to access the translation table and pass custom mapping as a second argument:
 
 ```javascript
-latinize.characters['Ω'] = 'O';
-
 // modify the behavior for German umlauts
-_.extend(latinize.characters,
-  {'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue', 'ä': 'ae', 'ö': 'oe', 'ü': 'ue'});
+const characters = {
+  ...latinize.characters,
+  'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue', 'ä': 'ae', 'ö': 'oe', 'ü': 'ue'
+};
+latinize('ÄÖ', characters) // => "AeOe"
 ```
 
 ## Details
