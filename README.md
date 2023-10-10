@@ -25,23 +25,6 @@ var latinize = require('latinize');
 latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů');
 ```
 
-AMD
-
-```javascript
-require(['latinize'], function(latinize){
-  latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů');
-});
-```
-
-browser
-
-```html
-<script src="../latinize.js"></script>
-<script>
-    document.write(latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů'));
-</script>
-```
-
 You can use the `latinize.characters` object to access the translation table and pass custom mapping as a second argument:
 
 ```javascript

@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Remove UMD, use CommonJS module format
+
 ## 0.6.0
 
 - Ability to pass custom mapping as an optional second argument
