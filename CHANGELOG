@@ -1,3 +1,8 @@
+## 2.0.0
+
+- Use ESM module format
+- Add TypeScript types via JSDoc
+
 ## 1.0.0
 
 - Remove UMD, use CommonJS module format

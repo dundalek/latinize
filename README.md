@@ -9,6 +9,11 @@ Simple library to convert accents (diacritics) from strings to latin characters.
 npm install latinize
 ```
 
+For CommonJS module format use the 1.x version
+```
+npm install latinize@1
+```
+
 ## Usage
 
 ES module
@@ -16,13 +21,6 @@ ES module
 ```javascript
 import latinize from 'latinize';
 latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů'); // => 'ExAmPlE aeiouycdenrstzu'
-```
-
-node.js CommonJS
-
-```javascript
-var latinize = require('latinize');
-latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů');
 ```
 
 You can use the `latinize.characters` object to access the translation table and pass custom mapping as a second argument:

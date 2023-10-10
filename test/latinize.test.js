@@ -1,4 +1,5 @@
-const latinize = require('latinize');
+import { expect, test } from '@jest/globals';
+import latinize from '../latinize';
 
 test('strips diacritics', () => {
   expect(latinize('ỆᶍǍᶆṔƚÉ áéíóúýčďěňřšťžů Hello World')).toBe('ExAmPlE aeiouycdenrstzu Hello World');
@@ -18,3 +19,6 @@ test('pass custom mapping', () => {
   expect(latinize('ÄÖ')).toBe('AO');
   expect(latinize('ÄÖ', characters)).toBe('AeOe');
 });
+
+// Should fail type check:
+// latinize(1)

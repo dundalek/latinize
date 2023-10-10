@@ -1,13 +1,14 @@
+/**
+ * @param {string} str
+ * @returns {string}
+ */
 function latinize(str, characters = latinize.characters) {
-  if (typeof str === 'string') {
-    return str.replace(/[^A-Za-z0-9]/g, function(x) {
-      return characters[x] || x;
-    });
-  } else {
-    return str;
-  }
+  return str.replace(/[^A-Za-z0-9]/g, function(x) {
+    return characters[x] || x;
+  });
 }
 
+/** @type {{[key: string]: string}} */
 latinize.characters = {
   'Á': 'A',
   'Ă': 'A',
@@ -912,4 +913,4 @@ latinize.characters = {
   'ю': 'yu',
 };
 
-module.exports = latinize;
+export default latinize;
