@@ -1,5 +1,8 @@
 
-# Latinize.js
+# Latinize.js [deprecated]
+
+> **! This library is deprecated !**  
+> As an alternative you can user the [transliterate](https://github.com/sindresorhus/transliterate) package instead.
 
 Simple library to convert accents (diacritics) from strings to latin characters.
 
